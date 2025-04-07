@@ -1,13 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Angry Admin Storage Calculator</title>
-  <link rel="stylesheet" href="./static/css/style.css" />
-</head>
-<body>
-  <div id="root"></div>
-  <script src="./static/js/main.js"></script>
-</body>
-</html>
+<div class="toggles">
+  <div class="switch-wrapper">
+    <span>Use Erasure Coding</span>
+    <label class="toggle-switch">
+      <input type="checkbox" id="erasure">
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <div class="switch-wrapper">
+    <span>Use VMware vSAN</span>
+    <label class="toggle-switch">
+      <input type="checkbox" id="vsan">
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <div class="switch-wrapper">
+    <span>Use Proxmox ZFS</span>
+    <label class="toggle-switch">
+      <input type="checkbox" id="zfs">
+      <span class="slider"></span>
+    </label>
+  </div>
+</div>
