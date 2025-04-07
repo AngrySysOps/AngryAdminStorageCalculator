@@ -1,28 +1,31 @@
 body {
   margin: 0;
   background-color: #0f172a;
-  color: white;
   font-family: 'Segoe UI', sans-serif;
+  color: white;
+  padding: 1rem;
 }
 
 .container {
-  max-width: 600px;
+  max-width: 700px;
   margin: auto;
-  padding: 2rem;
   background-color: #111827;
-  border-radius: 1rem;
-  margin-top: 3rem;
-  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
 }
 
 h1 {
   text-align: center;
+  font-size: 2rem;
   color: #38bdf8;
+  margin-bottom: 0.5rem;
 }
 
 p {
   text-align: center;
   color: #9ca3af;
+  margin-bottom: 2rem;
 }
 
 label {
@@ -33,23 +36,26 @@ label {
 
 input[type="number"] {
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.7rem;
   background: #1f2937;
-  color: white;
   border: 1px solid #374151;
-  border-radius: 0.5rem;
-  margin-top: 0.3rem;
+  border-radius: 0.75rem;
+  color: white;
+  margin-top: 0.4rem;
+  font-size: 1rem;
 }
 
 button {
   margin-top: 1.5rem;
   background-color: #2563eb;
   color: white;
-  padding: 0.7rem 1.5rem;
+  padding: 0.8rem 1.6rem;
   border: none;
   border-radius: 9999px;
-  font-weight: bold;
+  font-weight: 600;
   cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
 }
 
 button:hover {
@@ -59,14 +65,15 @@ button:hover {
 .results {
   margin-top: 2rem;
   background-color: #1e293b;
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 1rem;
 }
 
 .results ul {
   list-style: none;
-  padding-left: 0;
-  line-height: 1.7;
+  padding: 0;
+  line-height: 1.6;
+  font-size: 1.1rem;
 }
 
 .actions {
@@ -78,11 +85,70 @@ button:hover {
   margin: 0 0.5rem;
 }
 
+/* Toggle Switch */
 .toggles {
-  margin-top: 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.switch-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1f2937;
+  padding: 0.7rem 1rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+}
+
+.switch-wrapper span {
+  font-weight: 500;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 26px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #6b7280;
+  border-radius: 34px;
+  transition: 0.4s;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.toggle-switch input:checked + .slider {
+  background-color: #2563eb;
+}
+
+.toggle-switch input:checked + .slider::before {
+  transform: translateX(20px);
 }
 
 .hidden {
